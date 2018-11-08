@@ -34,7 +34,7 @@ export class AppComponent {
   // Sends a get request to the API and gets a response back.
   getResponse(){
     var playersJSON = '{ "Players" : ' + this.playersString + '}';
-    var requestString = 'http://localhost:64781/api/poker?play=' + playersJSON;
+    var requestString = 'https://pokerwebapi.azurewebsites.net/api/poker?play=' + playersJSON;
     this.response = this.http.get(requestString);
     this.winnerString = 'The winner is: ';
   }
