@@ -27,6 +27,17 @@ export class AppComponent {
 
     this.players.push(newPlayer);
     this.playersString = JSON.stringify(this.players);
+
+    // Clears the player_info input value
+    (<HTMLInputElement>document.getElementById('player_info')).value = '';
+  }
+
+  // Clears the input
+  clear(){
+    this.winnerString = null;
+    this.response = null;
+    this.players = Array();
+    (<HTMLInputElement>document.getElementById('player_info')).value = '';
   }
 
   constructor(private http: HttpClient) {}

@@ -7,12 +7,9 @@
           <label for="player_info">Player Info:</label>
           <input type="text" class="form-control" id="player_info" placeholder="Robert, 7H, 3S, 7C, 7S, 6D" #newPlayerInfo>
         </div>
-        <!-- <div class="form-group">
-          <label for="cards">Cards</label>
-          <input type="text" class="form-control" id="cards" placeholder="AS, 5H, 6S, 6D, 10S" #newPlayerCards>
-        </div> -->
         <div class="form-group">
           <button  class="btn btn-warning" (click)="addPlayer(newPlayerInfo.value)">Add Player</button>
+          <button  class="btn btn-danger ml-2" (click)="clear()">Clear</button>
         </div>
         <div class="form-group">
             <table class="table table-dark">
