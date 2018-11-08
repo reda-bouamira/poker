@@ -4,15 +4,15 @@
     <div class="col-8">
       <h1>{{ title }}</h1>
         <div class="form-group">
-          <label for="name">Player Name:</label>
-          <input type="text" class="form-control" id="name" placeholder="David" #newPlayerName>
+          <label for="player_info">Player Info:</label>
+          <input type="text" class="form-control" id="player_info" placeholder="Robert, 7H, 3S, 7C, 7S, 6D" #newPlayerInfo>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="cards">Cards</label>
           <input type="text" class="form-control" id="cards" placeholder="AS, 5H, 6S, 6D, 10S" #newPlayerCards>
-        </div>
+        </div> -->
         <div class="form-group">
-          <button  class="btn btn-warning" (click)="addPlayer(newPlayerName.value, newPlayerCards.value)">Add Player</button>
+          <button  class="btn btn-warning" (click)="addPlayer(newPlayerInfo.value)">Add Player</button>
         </div>
         <div class="form-group">
             <table class="table table-dark">
@@ -30,8 +30,11 @@
               </tbody>
             </table>
             <form action="" method="get">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button (click)="getResponse()" type="button" class="btn btn-primary">Display Winner</button>
           </form>
+        </div>
+        <div>
+            <h1>{{winnerString}}<span class="badge badge-secondary"></span>{{ response | async }}</h1>
         </div>
     </div>
   </div>
