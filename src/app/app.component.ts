@@ -34,6 +34,7 @@ export class AppComponent {
 
   // Clears the input
   clear(){
+    this.playersString = null;
     this.winnerString = null;
     this.response = null;
     this.players = Array();
